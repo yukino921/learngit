@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function rec() {
+      var sorce;
+      sorce = prompt("请输入你的cj", "成绩");
+      if (sorce >= 90) {
+        document.write("你真牛逼!");
+      }
+      else if (sorce >= 75) {
+        document.write("厉害啊!");
+      }
+      else if (sorce >= 60) {
+        document.write("加油!");
+      }
+      else {
+        document.write("要努力l!");
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <form action="">
+    <input type="submit" value="快来点我!" onclick="rec()">
+  </form>
+
+</body>
+
+</html>
