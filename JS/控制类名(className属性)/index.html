@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .one {
+      border: 100px;
+      width: 300px;
+      height: 350px;
+      background-color: aqua;
+      color: red;
+    }
+
+    .two {
+      border: 100px;
+      width: 300px;
+      height: 350px;
+      background-color: pink;
+      color: blue;
+    }
+  </style>
+  <script>
+    function add() {
+      var mystr = document.getElementById("p1");
+      mystr.className = "one";
+    }
+    function change() {
+      var mystr = document.getElementById("p2");
+      mystr.className = "two";
+    }
+  </script>
+</head>
+
+<body>
+  <p id="p1">JavaScript使网页显示动态效果并实现与用户交互功能。</p>
+  <input type="submit" value="点我添加样式" onclick="add()">
+  <p id="p2" class="one">JavaScript使网页显示动态效果并实现与用户交互功能。</p>
+  <input type="submit" value="点我更改样式" onclick="change()">
+</body>
+
+</html>

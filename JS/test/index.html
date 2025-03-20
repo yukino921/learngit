@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      font-size: 12px;
+    }
+
+    #txt {
+      height: 400px;
+      width: 600px;
+      border: #333 solid 1px;
+      padding: 5px;
+    }
+
+    p {
+      line-height: 18px;
+      text-indent: 2em;
+    }
+  </style>
+</head>
+
+<body>
+  <h2 id="con">JavaScript课程</H2>
+  <div id="txt">
+    <h5>JavaScript为网页添加动态效果并实现与用户交互的功能。</h5>
+    <p>1. JavaScript入门篇，让不懂JS的你，快速了解JS。</p>
+    <p>2. JavaScript进阶篇，让你掌握JS的基础语法、函数、数组、事件、内置对象、BOM浏览器、DOM操作。</p>
+    <p>3. 学完以上两门基础课后，在深入学习JavaScript的变量作用域、事件、对象、运动、cookie、正则表达式、ajax等课程。</p>
+  </div>
+  <form>
+    <!--当点击相应按钮，执行相应操作，为按钮添加相应事件-->
+    <input type="button" value="改变颜色" onclick="change_color()">
+    <input type="button" value="改变宽高" onclick="change_wh()">
+    <input type="button" value="隐藏内容" onclick=" hidetext()">
+    <input type="button" value="显示内容" onclick="showtext()">
+    <input type="button" value="取消设置" onclick="cancle()">
+  </form>
+  <script type="text/javascript">
+    var mystr = document.getElementById("txt");
+    //定义"改变颜色"的函数
+    function change_color() {
+      mystr.style.color = "red";
+      mystr.style.backgroundColor = "yellow";
+    }
+    //定义"改变宽高"的函数
+    function change_wh() {
+      mystr.style.width = "500px";
+      mystr.style.height = "500px";
+    }
+    //定义"隐藏内容"的函数
+    function hidetext() {
+      mystr.style.display = "none";
+    }
+    //定义"显示内容"的函数
+    function showtext() {
+      mystr.style.display = "block";
+    }
+    //定义"取消设置"的函数
+    function cancle() {
+      var message = confirm("是否取消设置");
+      if (message == true) {
+        mystr.removeAttribute("style");
+      }
+    }
+  </script>
+</body>
+
+</html>
